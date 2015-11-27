@@ -29,7 +29,12 @@ def main(config, verbose):
 @pass_config
 def duplicate(config, input, output):
     """
-    Creates a copy of input file with given name (output option value)
+    Create a duplicate copy of input file and save it as given output file.
+
+    \b
+    Sample Usage:
+
+    adb-vcftools duplicate --input sampledata/example-1.vcf --output sampledata/out-duplicate-example-1.vcf
     """
     if config.verbose:
         click.echo('We are in verbose mode')
@@ -45,7 +50,16 @@ def duplicate(config, input, output):
 @pass_config
 def fix_haploids(config, input, output):
     """
-    Converts haploid genotypes to homozygous diploid genotypes. For example, the program will print 0/0 instead of 0. This is useful for programs which do not handle haploid genotypes correctly.
+    Convert the haploid genotype to homozygous diploids.
+
+    It will convert 0 to 0/0 or 1 to 1/1.
+    This is useful for programs which do not handle haploid genotypes correctly. For example: TASSEL
+
+    \b
+    Sample Usage:
+
+    adb-vcftools fix_haploids --input sampledata/example-1.vcf --output sampledata/out-fixed-haploids-example-1.vcf
+
     """
     if config.verbose:
         click.echo('We are in verbose mode')
