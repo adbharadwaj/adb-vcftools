@@ -1,5 +1,30 @@
 # adb-vcftools
 
+### How to install
+
+* Clone the repository
+```
+git clone https://github.com/adbharadwaj/adb-vcftools.git
+```
+* In the command line, enter the cloned repository
+```
+cd adb-vcftools
+```
+* Install [python](http://www.tutorialspoint.com/python/python_environment.htm) if not installed
+* Install [pip](http://pip.readthedocs.org/en/stable/installing/) if not installed. For Mac users:
+```
+brew install pip
+```
+* Install the command line tool
+```
+pip install --editable .                                                                   
+```
+* Activate the command line tool for current bash session
+```
+source venv/bin/activate  
+```
+### How to Use
+
 Basic useful feature list:
 
  * Extend the functionality offered by [vcftools](https://vcftools.github.io/index.html).
