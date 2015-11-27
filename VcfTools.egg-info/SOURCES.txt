@@ -1,0 +1,7 @@
+VcfTools.egg-info/PKG-INFO
+VcfTools.egg-info/SOURCES.txt
+VcfTools.egg-info/dependency_links.txt
+VcfTools.egg-info/entry_points.txt
+VcfTools.egg-info/not-zip-safe
+VcfTools.egg-info/requires.txt
+VcfTools.egg-info/top_level.txt

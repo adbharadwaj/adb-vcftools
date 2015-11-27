@@ -1,0 +1,3 @@
+[console_scripts]
+adb-vcftools = vcftools.cli:main
+

@@ -1,0 +1,10 @@
+#!/Users/adb/Documents/dev/adb-vcftools/venv/bin/python3.4
+# EASY-INSTALL-ENTRY-SCRIPT: 'VcfTools==0.1.0','console_scripts','adb-vcftools'
+__requires__ = 'VcfTools==0.1.0'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('VcfTools==0.1.0', 'console_scripts', 'adb-vcftools')()
+    )
