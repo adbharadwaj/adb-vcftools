@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Adb-vcftools by adbharadwaj</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Adb-vcftools</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/adbharadwaj/adb-vcftools" class="btn">View on GitHub</a>
+      <a href="https://github.com/adbharadwaj/adb-vcftools/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/adbharadwaj/adb-vcftools/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="adb-vcftools" class="anchor" href="#adb-vcftools" aria-hidden="true"><span class="octicon octicon-link"></span></a>adb-vcftools</h1>
+
+<h3>
+<a id="how-to-install" class="anchor" href="#how-to-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to install</h3>
+
+<ul>
+<li>Clone the repository</li>
+</ul>
+
+<pre><code>git clone https://github.com/adbharadwaj/adb-vcftools.git
+</code></pre>
+
+<ul>
+<li>In the command line, enter the cloned repository</li>
+</ul>
+
+<pre><code>cd adb-vcftools
+</code></pre>
+
+<ul>
+<li>Install <a href="http://www.tutorialspoint.com/python/python_environment.htm">python</a> if not installed</li>
+<li>Install <a href="http://pip.readthedocs.org/en/stable/installing/">pip</a> if not installed. For Mac users:</li>
+</ul>
+
+<pre><code>brew install pip
+</code></pre>
+
+<ul>
+<li>Install the command line tool</li>
+</ul>
+
+<pre><code>pip install --editable .                                                                   
+</code></pre>
+
+<ul>
+<li>Activate the command line tool for current bash session</li>
+</ul>
+
+<pre><code>source venv/bin/activate  
+</code></pre>
+
+<h3>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Use</h3>
+
+<p>Basic useful feature list:</p>
+
+<ul>
+<li>Extend the functionality offered by <a href="https://vcftools.github.io/index.html">vcftools</a>.</li>
+<li>Create command line tools which can convert any vcf file into <a href="https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/Tassel5PipelineCLI.pdf">TASSEL</a>. compatible vcf file.</li>
+</ul>
+
+<p>Current Version: 0.1.0</p>
+
+<p>Here is a list of commands available in version 0.1.0:</p>
+
+<ul>
+<li>duplicate </li>
+<li>fix_haploids </li>
+</ul>
+
+<p>And here is an example on how to use these commands:</p>
+
+<h3>
+<a id="fix_haploids" class="anchor" href="#fix_haploids" aria-hidden="true"><span class="octicon octicon-link"></span></a>fix_haploids</h3>
+
+<pre><code>Usage: adb-vcftools fix_haploids [OPTIONS]
+
+  Convert the haploid genotype to homozygous diploids.
+
+  It will convert 0 to 0/0 or 1 to 1/1. This is useful for programs which do
+  not handle haploid genotypes correctly. For example: TASSEL
+
+  Sample Usage:
+
+  adb-vcftools fix_haploids --input sampledata/example-1.vcf --output
+  sampledata/out-fixed-haploids-example-1.vcf
+
+Options:
+  --input PATH   Input VCF file  [required]
+  --output PATH  Output VCF file  [required]
+  --help         Show this message and exit.
+</code></pre>
+
+<h3>
+<a id="duplicate" class="anchor" href="#duplicate" aria-hidden="true"><span class="octicon octicon-link"></span></a>duplicate</h3>
+
+<pre><code>Usage: adb-vcftools duplicate [OPTIONS]
+
+  Create a duplicate copy of input file and save it as given output file.
+
+  Sample Usage:
+
+  adb-vcftools duplicate --input sampledata/example-1.vcf --output
+  sampledata/out-duplicate-example-1.vcf
+
+Options:
+  --input PATH   Input VCF file  [required]
+  --output PATH  Output VCF file  [required]
+  --help         Show this message and exit.
+</code></pre>
+
+<h3>
+<a id="python-packages-used-in-thie-project" class="anchor" href="#python-packages-used-in-thie-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python packages used in thie project:</h3>
+
+<ul>
+<li>
+<a href="http://pyvcf.readthedocs.org/en/latest/index.html">pyvcf</a> for VCF parsing</li>
+<li>
+<a href="http://click.pocoo.org/">click</a> for creating the command line interface</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/adbharadwaj/adb-vcftools">Adb-vcftools</a> is maintained by <a href="https://github.com/adbharadwaj">adbharadwaj</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
